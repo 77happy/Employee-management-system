@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=zh-CN xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset=utf-8>
+	<meta http-equiv=X-UA-Compatible content="IE=edge">
+	<title>登陆页面</title>
+	<script src="./axios.min.js"></script>
+	<script src="./config.js"></script>
+	<script src="./api.js"></script>
+
+	<link rel="stylesheet" href="./logincss.css">
+
+<body>
+<center>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Username</label>
+			<div class="col-sm-10">
+				<input name="username" class="form-control" id="userName" placeholder="Username">
+			</div>
+		</div>
+		<div class="form-group">
+			<label  class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" name="password" class="form-control" id="passWord" placeholder="Password">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Remember me
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default" id="btn_submit">Sign in</button>
+			</div>
+		</div>
+		<!--<p style="color: red;" th:text="${msg}" th :if="${not #strings.isEmpty(msg)}"></p>-->
+</center>
+
+</body>
+<script>
+    // const axios = require('axios');
+
+    document.getElementById("btn_submit").addEventListener('click', function () {
+        var userName = document.getElementById("userName").value;
+        var passWord = document.getElementById("passWord").value;
+        test({
+            userName,
+            passWord
+        }).then(function (res) {
+			if(res.code == 200){
+				// 登录成功
+				// 跳转到主界面
+				window.location.href='mainpage.html';
+			}else{
+				alert("登录失败！！")
+			}
+          
+        })
+
+    });
+
+</script>
+
+</html>

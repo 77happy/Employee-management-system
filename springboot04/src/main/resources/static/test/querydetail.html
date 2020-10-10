@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Querydetail</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App Icons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- DataTables -->
+    <!-- <link href="../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- Responsive datatable examples -->
+    <!-- <link href="../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
+
+    <!-- Basic Css files -->
+    <link href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body class="fixed-left">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+
+
+            <div class="sidebar-inner slimscrollleft">
+                <div id="sidebar-menu">
+                    <ul>
+
+                        <li class="menu-title">Query</li>
+
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i
+                                    class="mdi mdi-email-outline"></i><span> 查询员工 <span class="pull-right"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="list-unstyled">
+                                <!-- <span class="badge badge-pill badge-success pull-right">9</span> -->
+                                <li><a href="mainpage.html">查询所有员工</a></li>
+                                <li><a href="querydetail.html">查询具体员工</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">Add</li>
+                        <li>
+                            <a href="add.html" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>
+                                    增加员工信息 </span></a>
+                        </li>
+
+                        <li class="menu-title">Modify</li>
+                        <li >
+                            <a href="modify.html" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>
+                                修改员工信息
+                                </span></a>
+                        </li>
+
+                        <li class="menu-title">Delete</li>
+                        <li>
+                            <a href="delete.html" class="waves-effect"><i
+                                    class="mdi mdi-airplane"></i><span> 删除员工信息</span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
+        </div>
+        <!-- Left Sidebar End -->
+
+                <div id="sidebar-menu">
+                    <ul>
+                        <ul>
+
+                            <li class="menu-title">Query</li>
+    
+    
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i
+                                        class="mdi mdi-email-outline"></i><span> 查询员工 <span class="pull-right"><i
+                                                class="mdi mdi-chevron-right"></i></span> </span></a>
+                                <ul class="list-unstyled">
+                                    <!-- <span class="badge badge-pill badge-success pull-right">9</span> -->
+                                    <li><a href="mainpage.html">查询所有员工</a></li>
+                                    <li><a href="querydetail.html">查询具体员工</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="menu-title">Add</li>
+                            <li>
+                                <a href="add.html" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>
+                                        增加员工信息 </span></a>
+                            </li>
+    
+                            <li class="menu-title">Modify</li>
+                            <!-- <li class="has_sub"> -->
+                                <a href="modify.html" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>
+                                    修改员工信息
+                                    </span></a>
+                            </li>
+    
+                            <li class="menu-title">Delete</li>
+                            <li>
+                                <a href="delete.html" class="waves-effect" ><i
+                                        class="mdi mdi-airplane"></i><span> 删除员工信息</span></a>
+                            </li>
+    
+    
+                        </ul>
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
+        </div>
+        <!-- Start right Content here -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                <!-- Top Bar Start -->
+                <div class="topbar">
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <!-- Search -->
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link waves-effect toggle-search" href="#" data-target="#search-wrap">
+                                    <i class="mdi mdi-magnify noti-icon"></i>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                        <!-- Page title -->
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="list-inline-item">
+                                <button type="button" class="button-menu-mobile open-left waves-effect">
+                                    <i class="ion-navicon"></i>
+                                </button>
+                            </li>
+                            <li class="hide-phone list-inline-item app-search">
+                                <h3 class="page-title">具体员工信息</h3>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+                    </nav>
+
+                </div>
+                <div class="page-content-wrapper">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="datatable"
+                                            class="table table-striped dt-responsive nowrap table-vertical" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Username</th>
+                                                    <th>Email</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Balance</th>
+                                                    <th>Position</th>
+                                                    <th>Address</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Herbert C. Patton</td>
+                                                    <td>herbart@admiria.com</td>
+                                                    <td>801-388-6508</td>
+                                                    <td>$5,412</td>
+                                                    <td>老板</td>
+                                                    <td>301</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- container -->
+
+                </div> <!-- Page content Wrapper -->
+
+            </div> <!-- content -->
+
+            <footer class="footer">
+                © 2020<span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+                        class="mdi mdi-heart text-danger"></i> by <a href="#">qrq</a></span>
+            </footer>
+
+        </div>
+        <!-- End Right content here -->
+
+    </div>
+    <!-- jQuery  引入配置文件，删掉页面无法加载 -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

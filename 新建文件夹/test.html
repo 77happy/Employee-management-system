@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+	<head>
+		<meta charset=utf-8>
+		<meta http-equiv=X-UA-Compatible content="IE=edge">
+		<title>77测试用</title>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="./config.js"></script>
+		<script src="./api.js"></script>
+		
+		
+		<body>
+		<div id=app></div>
+			<button type="submit" id="btn_submit"> submit </button>
+		 </body> 
+		 <script>
+			 // const axios = require('axios');
+			 
+			 document.getElementById("btn_submit").addEventListener('click', function(){
+				 
+				 test({
+					 userName:'admin',
+					 passWord:'123456'
+				 }).then(function(res){
+					 console.log(res)
+				 })
+			 
+			 });
+			 
+		 </script>
+</html>

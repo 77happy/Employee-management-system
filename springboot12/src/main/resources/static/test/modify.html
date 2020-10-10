@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Modify</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App Icons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- DataTables -->
+    <!-- <link href="../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- Responsive datatable examples -->
+    <!-- <link href="../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
+
+    <!-- Basic Css files -->
+    <link href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="./axios.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./api.js"></script>
+</head>
+
+
+<body class="fixed-left">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+
+
+            <div class="sidebar-inner slimscrollleft">
+                <div id="sidebar-menu">
+                    <ul>
+
+                        <li class="menu-title">Query</li>
+
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i
+                                    class="mdi mdi-email-outline"></i><span> 查询员工 <span class="pull-right"><i
+                                            class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="list-unstyled">
+                                <!-- <span class="badge badge-pill badge-success pull-right">9</span> -->
+                                <li><a href="mainpage.html">查询所有员工</a></li>
+                                <li><a href="querydetail.html">查询具体员工</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">Add</li>
+                        <li>
+                            <a href="add.html" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>
+                                    增加员工信息 </span></a>
+                        </li>
+
+                        <li class="menu-title">Modify</li>
+                        <li>
+                            <a href="modify.html" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span>
+                                    修改员工信息
+                                </span></a>
+                        </li>
+
+                        <li class="menu-title">Delete</li>
+                        <li>
+                            <a href="delete.html" class="waves-effect"><i class="mdi mdi-airplane"></i><span>
+                                    删除员工信息</span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- Start right Content here -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                <!-- Top Bar Start -->
+                <div class="topbar">
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <!-- Search -->
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link waves-effect toggle-search" href="#" data-target="#search-wrap">
+                                    <i class="mdi mdi-magnify noti-icon"></i>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                        <!-- Page title -->
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="list-inline-item">
+                                <button type="button" class="button-menu-mobile open-left waves-effect">
+                                    <i class="ion-navicon"></i>
+                                </button>
+                            </li>
+                            <li class="hide-phone list-inline-item app-search">
+                                <h3 class="page-title">修改员工信息</h3>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+                    </nav>
+
+                </div>
+                <div class="page-content-wrapper">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-20">
+                                    <div class="card-body">
+                                        <table id="mainTable" class="table table-striped m-b-0">
+                                            <thead>
+                                                <tr>
+                                                <tr>
+                                                    <th>Username</th>
+                                                    <th>Email</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Balance</th>
+                                                    <th>Position</th>
+                                                    <th>id (Please do not edit)</th>
+                                                    <th>Modify</th>
+                                                </tr>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody">
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+                    </div><!-- container -->
+
+                </div> <!-- Page content Wrapper -->
+
+            </div> <!-- content -->
+
+            <footer class="footer">
+                © 2020<span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+                        class="mdi mdi-heart text-danger"></i> by <a href="#">qrq</a></span>
+            </footer>
+
+        </div>
+        <!-- End Right content here -->
+
+    </div>
+    <!-- jQuery  引入配置文件，删掉页面无法加载 -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <!-- Table editable -->
+    <script src="tiny-editable/mindmup-editabletable.js"></script>
+    <script src="tiny-editable/numeric-input-example.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        window.onload = function () {
+            queryall({
+            }).then(function (res) {
+                var len = res.length;
+                console.log(len + '长度')
+                console.log(res);
+                for (let i = 0; i < res.length; i++) {
+                    var tr = document.createElement("tr");
+                    //以下`` 这个叫反引号 拼凑字符串用的 例如第一个td实际编译会变成 <td id='username1'>
+                    tr.innerHTML = `<td id='${'username'+i}'>` + res[i].username + "</td>" +
+                    `<td id='${'email'+i}'>` + res[i].email + "</td>" +
+                    `<td id='${'phonenumber'+i}'>` + res[i].phonenumber + "</td>" +
+                    `<td id='${'balance'+i}'>` + res[i].balance + "</td>" +
+                    `<td id='${'position'+i}'>`+ res[i].position + "</td>" +
+                    `<td id='${'id'+i}'>` + res[i].id + "</td>" +
+                    //按钮的id记得要按i来命名，方便下面绑定点击事件
+                    "<button type='submit' class='btn btn-default' id='modify"+i+"'>modify</button>"
+                    // 获取table 添加到table
+                    var employeeTable = document.getElementById("datatable");
+                    var tbody = document.getElementsByTagName("tbody")[0];
+                    tbody.appendChild(tr);
+                    //按钮的点击事件也在for循环里生成 
+                    var btn = document.getElementById("modify" + i);
+                    btn.onclick = function () {
+                        //点击的时候获取当前这一列的每一个对象值 跟上面生成的时候是一一对应的
+                        // 根据id 之前的写法，res[i].username 这些值返回回来是不会变的 改的只是dom值，所以得拿这个时候的页面dom值
+                        var username = document.getElementById("username"+i).innerHTML;
+                        var email = document.getElementById("email"+i).innerHTML;
+                        var phonenumber = document.getElementById("phonenumber"+i).innerHTML;
+                        var balance = document.getElementById("balance"+i).innerHTML;
+                        var position = document.getElementById("position"+i).innerHTML;
+                        var id = res[i].id;
+                        console.log(username,email,phonenumber,balance,position,id)
+                        modify({
+                            username,
+                            email,
+                            phonenumber,
+                            balance,
+                            position,
+                            id
+                        }).then(res=>{
+                            console.log(res)
+                        })
+                    }
+                }
+                $('#mainTable').editableTableWidget()
+            })
+
+        }
+    </script>
+</body>
+
+</html>
